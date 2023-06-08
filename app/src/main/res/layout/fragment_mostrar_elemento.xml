@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MostrarElementoFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imagen"
+                android:layout_width="match_parent"
+                android:layout_height="202dp"
+                android:layout_marginTop="44dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@id/precioTotal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.486"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+
+            <TextView
+                android:id="@+id/nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:textColor="@color/Black"
+                />
+
+            <TextView
+                android:id="@+id/horas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hace 4 horas"
+                android:textSize="15sp"
+                android:textColor="@color/Black"
+                />
+
+            <TextView
+                android:id="@+id/precio"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/DarkBlue"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horas" />
+
+            <TextView
+                android:id="@+id/detalle"
+                android:text="Detalle del Vehiculo"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/Black"
+                android:textSize="26dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/precio"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/informacion"
+                android:text="Localidad - Kilometros - Año - Combustible"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textColor="@color/Black"
+                android:textSize="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/detalle"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/descripcionVendedor"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Descripción del vendedor"
+                android:textColor="@color/Black"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/informacion"
+                android:layout_marginBottom="15dp"/>
+
+            <TextView
+                android:id="@+id/descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Black"
+                android:textSize="18dp"
+                android:layout_marginBottom="30dp"
+                app:layout_constraintTop_toBottomOf="@id/descripcionVendedor"
+                />
+
+            <TextView
+                android:id="@+id/valoracionDetalle"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Valoración del anuncio"
+                android:textColor="@color/Black"
+                android:textSize="26dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/informacion"
+                android:layout_marginBottom="15dp"/>
+
+            <RatingBar
+                android:id="@+id/valoracion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>
